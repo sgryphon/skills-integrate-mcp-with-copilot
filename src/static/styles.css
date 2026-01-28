@@ -24,8 +24,60 @@ header {
   border-radius: 5px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.admin-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.admin-status {
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.icon-button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.icon-button:hover {
+  transform: scale(1.05);
+}
+
+.admin-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 5;
 }
 
 main {
@@ -162,6 +214,37 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.disabled-form {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .message {
